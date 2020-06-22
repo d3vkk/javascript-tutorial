@@ -2,9 +2,9 @@
 
 ![Website Screenshot](https://github.com/d3vkk/javascript-basics-tutorial/blob/master/screenshot.png)
 
-Javascript Basics Tutorial from Derek Banas
+Javascript Basics Tutorial from Derek Banas. With short, useful comments.
 
-https://www.youtube.com/watch?v=fju9ii8YsGs
+[Youtube Video](https://www.youtube.com/watch?v=fju9ii8YsGs)
 
 ```
 git clone https://github.com/d3vkk/javascript-basics-tutorial.git
