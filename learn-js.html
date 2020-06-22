@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>LEARNING JAVASCRIPT</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Donald K">
+	<style type="text/css">
+		body {
+			margin: 0;
+			font-size: 1.6em;
+			background: #F2EEE1;
+		}
+
+		.title {
+			display: block;
+			position: sticky;
+			top: -1px;
+			background-color: #f79999;
+			font-size: 3em;
+			color: #111;
+			box-shadow: 0 0 5em 0 rgba(0, 0, 0, 0.2);
+		}
+
+		button {
+			border: 2px solid black;
+			background: #E5E4E2;
+			font-size: .5em;
+			font-weight: bold;
+			color: black;
+			padding: .8em 2em;
+			margin-top: .4em;
+		}
+
+		footer {
+			display: block;
+			width: 100%;
+			height: 2em;
+			background-color: mediumaquamarine;
+		}
+
+		.subtitle {
+			display: block;
+			background-color: #ff9c23;
+			font-size: 1em;
+			color: #222;
+		}
+
+		.notes {
+			display: block;
+			background-color: #fff;
+			font-size: 0.7em;
+			color: #333;
+		}
+
+		ul,
+		li {
+			list-style-type: none;
+			margin: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- onload="alert('Hello')"-->
+	<div class="title">LEARNING JAVASCRIPT</div>
+	<div class="subtitle">PROMPTING USER FOR NAME AND DIPLAYING IT</div>
+	<p id="sayHello"></p>
+	<script type="text/javascript">
+		/*
+			JAVASCRIPT FEATURES
+			1. Case sensitive, hence yourName is not the same as yourname
+			2. Loosely typed, hence variables don't have to be defined as strings or integers like C++
+			3. You can use either double or single quotation but single is preferred as it is easier to type
+			4. However for Arrays & Libraries, use double quotation marks
+		*/
+
+		var yourName = prompt('What is your name?');
+		if (yourName != null) {
+			document.getElementById('sayHello').innerHTML = 'Hello ' + yourName;
+		}
+
+		//ARITHMETIC
+		document.write('<div class="subtitle">ARITHMETIC</div><div class="notes">');
+		document.write('4 + 3 = ', 4 + 3, '<br>');
+		document.write('4 - 3 = ', 4 - 3, '<br>');
+		document.write('4 * 3 = ', 4 * 3, '<br>');
+		document.write('4 / 3 = ', 4 / 3, '<br>');
+		document.write('4 % 3 = ', 4 % 3, '<br>');
+		document.write('</div>');
+
+		var sampNum = 4;
+		//INCREMENT/DECREMENT
+		document.write('<div class="subtitle">INCREMENT/DECREMENT</div><div class="notes">');
+		//Outputs then adds 1
+		document.write('number++ = ', sampNum++, '<br>');
+		//Adds 1 then outputs
+		document.write('++number = ', ++sampNum, '<br>');
+		//Outputs then subtracts 1
+		document.write('number-- = ', sampNum--, '<br>');
+		//Subtracts 1 then outputs
+		document.write('--number = ', --sampNum, '<br>');
+		document.write('</div>');
+
+		//B.O.D.M.A.S - Brackets Of Multiplication Addition & Subtraction
+		document.write('<div class="subtitle">B.O.D.M.A.S - Brackets Of Multiplication Addition & Subtraction</div><div class="notes">');
+		document.write('3 + 2 * 5 = ', 3 + 2 * 5, '<br>');
+		document.write('(3 + 2) * 5 = ', (3 + 2) * 5, '<br>');
+		document.write('</div>');
+
+		//ASSIGNMENT OPERATORS
+		document.write('<div class="subtitle">ASSIGNMENT OPERATORS</div><div class="notes">');
+		document.write('number += 7 = ', sampNum += 7, '<br>');
+		document.write('number -= 7 = ', sampNum -= 7, '<br>');
+		document.write('number *= 7 = ', sampNum *= 7, '<br>');
+		document.write('number /= 7 = ', sampNum /= 7, '<br>');
+		document.write('number %= 7 = ', sampNum %= 7, '<br>');
+		document.write('</div>');
+
+		//INBUILT MATHS LIBRARY
+		document.write('<div class="subtitle">INBUILT MATHS LIBRARY</div><div class="notes">');
+		document.write('<b>Constant</b>: Math.E = ', Math.E, '<br>');
+		document.write('<b>Constant</b>: Math.PI = ', Math.PI, '<br>');
+		document.write('<b>Absolute Value</b>: Math.abs(-8) = ', Math.abs(-8), '<br>');
+		document.write('<b>Square Root</b>: Math.sqrt(1000) = ', Math.sqrt(1000), '<br>');
+		document.write('<b>Cube Root</b>: Math.cbrt(1000) = ', Math.cbrt(1000), '<br>');
+		document.write('<b>Round Up</b>: Math.ceil(6.45) = ', Math.ceil(6.45), '<br>');
+		document.write('<b>Round Down</b>: Math.floor(6.45) = ', Math.floor(6.45), '<br>');
+		document.write('<b>Standard Round</b>: Math.round(6.45) = ', Math.round(6.45), '<br>');
+		document.write('<b>Logarithm of 10</b>: Math.log(10) = ', Math.log(10), '<br>');
+		document.write('<b>Logarithm of 10 Base 10</b>: Math.log10(10) = ', Math.log10(10), '<br>');
+		document.write('<b>Maximum of Two Numbers</b>: Math.max(10,5) = ', Math.max(10, 5), '<br>');
+		document.write('<b>Minimum of Two Numbers</b>: Math.min(10,5) = ', Math.min(10, 5), '<br>');
+		document.write('<b>4 to the power of 2</b>: Math.pow(4,2) = ', Math.pow(4, 2), '<br>');
+		document.write('</div>');
+
+		//REMOVING DECIMALS
+		document.write('<div class="subtitle">REMOVING DECIMALS</div><div class="notes">');
+		//Sets to two decimal places
+		document.write(153.4345113.toFixed(2));
+		document.write('</div>');
+
+		//RANDOM NUMBER
+		document.write('<div class="subtitle">RANDOM NUMBER</div><div class="notes">');
+		/*
+			'Math.floor' is to round it down
+			'* 10' is to get a value upto 10
+			'+ 1' is to start at 1
+		*/
+		document.write('Random Number between 1 and 10 = ', Math.floor((Math.random() * 10) + 1), '<br>');
+		document.write('</div>');
+
+		//MAXIMUM AND MINIMUM VALUES IN JAVASCRIPT
+		document.write('<div class="subtitle">MAXIMUM AND MINIMUM VALUES IN JAVASCRIPT</div><div class="notes">');
+		document.write('Max Num = ', Number.MAX_VALUE, '<br>');
+		document.write('Min Num = ', Number.MIN_VALUE, '<br>');
+		document.write('</div>');
+
+		//NUMBER PRECISION TEST
+		document.write('<div class="subtitle">NUMBER PRECISION TEST</div><div class="notes">');
+		document.write('<div class="notes">Can only be precise upto 16 digits</div>');
+		document.write(0.1000000000000001 + 0.1000000000000001, '<br>');
+		document.write(0.10000000000000001 + 0.10000000000000001, '<br>');
+		document.write('</div>');
+		//Applies to all programming languages
+
+		var sampStr = 'Hello World! Bye Bye';
+		//STRING LENGTH & INDEX
+		document.write('<div class="subtitle">STRING LENGTH & INDEX</div><div class="notes">');
+		document.write('<b>String:</b> ', sampStr, '<br>');
+		document.write('<b>String Length:</b> ', sampStr.length, '<br>');
+		document.write('<b>String Index Position of `!`:</b> ', sampStr.indexOf('!'), '<br>');
+		document.write('<b>String Slice of index postion 2 to 10:</b> ', sampStr.slice(2, 10), '<br>');
+		document.write('<b>String Slice of index postion 2 to the end:</b> ', sampStr.slice(2), '<br>');
+		document.write('<b>SubString from index postion 2 plus 5 characters:</b> ', sampStr.substr(2, 5), '<br>');
+		document.write('<b>Character At Index 6:</b> ', sampStr.charAt(6), '<br>');
+		document.write('</div>');
+
+		//STRING STYLE
+		document.write('<div class="subtitle">STRING STYLE</div><div class="notes">');
+		document.write('<b>Upper Case:</b> ', sampStr.toUpperCase(), '<br>');
+		document.write('<b>Lower Case:</b> ', sampStr.toLowerCase(), '<br>');
+		document.write('<b>Big:</b> ', sampStr.big(), '<br>');
+		document.write('<b>Small:</b> ', sampStr.small(), '<br>');
+		document.write('<b>Bold:</b> ', sampStr.bold(), '<br>');
+		document.write('<b>Italics:</b> ', sampStr.italics(), '<br>');
+		document.write('<b>Strike:</b> ', sampStr.strike(), '<br>');
+		document.write('<b>Superscript:</b> ', sampStr.sup(), '<br>');
+		document.write('<b>Subscript:</b> ', sampStr.sub(), '<br>');
+		document.write('<b>Add Link:</b> ', sampStr.link('https://www.example.com'), '<br>');
+		document.write('</div>');
+
+		//STRING OTHER
+		document.write('<div class="subtitle">STRING OTHER</div><div class="notes">');
+		document.write('<b>String Replacement:</b> ', sampStr.replace('Bye Bye', 'Au Revoir'), '<br>');
+		document.write('<b>Trim White Space at the beginning and the end (can also remove characters):</b> ', sampStr.trim(), '<br>');
+		document.write('<b>Including Syntax Characters:</b> \"Double Quotes\" <br>');
+		document.write('</div>');
+
+		var bob = ["Bobby", "123 Main Street", 25.67];
+		//ARRAYS
+		document.write('<div class="subtitle">ARRAYS</div><div class="notes">');
+		document.write('<b>Array:</b> ', bob, '<br>');
+		document.write('<b>First Index Of Array:</b> ', bob[0], '<br>');
+		//Inserting into array
+		bob[3] = "bob@gmail.com";
+		/*
+			'2' - index of the array to be removed
+			'1' - number of indices after the index to be removed
+			'New York', 'NY' - strings to replaced the removed index/indices
+		*/
+		bob.splice(2, 1, 'New York', 'NY');
+		document.write(bob + '<br>');
+		//Removes fifth index in array
+		bob.splice(4, 1);
+		document.write(bob + '<br>');
+		document.write('</div>');
+
+		//COVERSION
+		document.write('<div class="subtitle">COVERSION</div><div class="notes">');
+		document.write('<b>Converts Number to String through concatenation:</b> 4 + 3 = ' + 4 + 3, '<br>');
+		document.write('<b>Converts String to Number:</b> Number("3.14") = ', Number("3.14"), '<br>');
+		document.write('<b>Converts String to Integer:</b> parseInt("3.14") = ', parseInt("3.14"), '<br>');
+		document.write('<b>Converts String to Float:</b> parseFloat("3.14") = ', parseFloat("3.14"), '<br>');
+		document.write('<b>Converts String to Array by splitting it at white spaces:</b> sampStr.split(" ") = ', sampStr.split(" "), '<br>');
+		document.write('<b>Converts String to Array by splitting it at letter `o`:</b> sampStr.split("o") = ', sampStr.split("o"), '<br>');
+		//Note that when you do this, the character you specify is removed
+		document.write('<b>Converts Array to String:</b> bob.toString() = ', bob.toString(), '<br>');
+		document.write('<b>Converts Array to String:</b> bob.valueOf() = ', bob.valueOf(), '<br>');
+		//adds a comma and a space between the array values/indices
+		document.write('<b>Converts Array to String:</b> bob.join(', ') = ', bob.join(', '), '<br>');
+		document.write('</div>');
+
+		var age = 8;
+		//CONDITIONAL, RELATIONAL & LOGICAL OPERATORS
+		/*
+			Conditional Operators: If else statements, for loop, while loop, do while loop
+			Relational Operators: ==, !=, >, <, <=, >= (with their usual meanings)
+								  , === (equal in value and type)
+								  , !== (not equal in value or type)
+			Logical Operators: &&, ||, ! (with their usual meanings)
+		*/
+		document.write('<div class="subtitle">CONDITIONAL, RELATIONAL & LOGICAL OPERATORS</div><div class="notes">');
+		//If else statement showing Class Assignment System
+		if ((age >= 5) && (age <= 6)) {
+			document.write('Go to Kindergarten <br>');
+		} else if (age > 18) {
+			document.write('Go to College <br>');
+		} else {
+			document.write('Go to Grade ', age - 5, '<br>');
+		}
+
+		//For Loop for printing odd numbers
+		for (var j = 0; j <= 20; j++) {
+			if ((j % 2) === 0) {
+				continue; //starts another loop
+			}
+			if (j === 15) {
+				break; //stops for loop at 15 instead of 20
+			}
+			document.write(j + '<br>');
+		}
+
+		//For Loop for printing values of a library (i.e. an array tht has name and value pairs). Note that it's string s have to have double quotation marks
+		var customer = {
+			name: "Bobby",
+			address: "123 Main Street",
+			balance: 25.67
+		};
+		for (k in customer) {
+			document.write(customer[k] + '<br>'); //prints all the values
+		}
+
+		//While Loop
+		var i = 1;
+		while (i < 10) {
+			document.write(i + '<br>');
+			i++; //without the increment, it will be an infinite loop
+		}
+
+		//Do While Loop
+		do {
+			var guess = prompt('Guess a number between 1 and 10 (Hint: its 7)');
+		}
+		while (guess != 7);
+		alert('Your guess was correct!');
+
+		document.write('Boolean true || false ', true || false, '<br>');
+		document.write('!true becomes ', !true, '<br>');
+		document.write('\"5\" == 5 is ', ("5" == 5), '<br>');
+		document.write('\"5\" === 5 is ', ("5" === 5), '<br>');
+		document.write('</div>');
+
+		//SWITCH STATEMENT
+		document.write('<div class="subtitle">SWITCH STATEMENT</div><div class="notes">');
+		//Class Assignment System
+		switch (age) {
+			//Checks if age is 5 or 6
+			case 5:
+			case 6:
+				document.write('Go to Kindergarten <br>');
+				break;
+				//Checks if age is 18
+			case 18:
+				document.write('Go to College <br>');
+				break;
+				//If none of the above is true
+			default:
+				document.write('Go to Grade ', age - 5, '<br>');
+		}
+		document.write('</div>');
+
+		//TERNARY OPERATOR
+		document.write('<div class="subtitle">TERNARY OPERATOR</div><div class="notes">');
+		/*
+			FORMAT:
+			(condition) ? ifTrue : ifFalse
+			'ifTrue' - Executed if condition is true
+			'ifFalse' - Executed if condition is false
+		*/
+		document.write('Can I vote: ', (age >= 18) ? true : false, '<br>');
+		document.write('</div>');
+
+		/*function init(){
+		    var h1tags =document.getElementsByTagName("h1");
+		    /*'h1tags[0]' is an array that picks the first h1 tag since in arrays, zero is the first number.
+		    When clicked, takes you to the function 'changeColor'
+
+		    h1tags[0].onclick=changeColor;
+		}
+
+		function changeColor(){
+		    this.innerHTML="Click to Generate Random Color Again";
+		    //Uses Maths to generate Random Color
+		    var randomcolor='#'+Math.floor(Math.random()*16777215).toString(16);
+		}
+		//When page loads, perform function init
+		onload = init;*/
+	</script>
+
+	<br>
+	<div class="notes">Check Editor For More Details</div>
+	<footer></footer>
+</body></html>
